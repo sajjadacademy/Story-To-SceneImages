@@ -1,7 +1,8 @@
-📘 Story To SceneImages
+**📘 Story To SceneImages**
+
 AI-Powered Scene Image Generator for Story Creators
 
-Publisher: Sajjad Academy
+Publisher: **Sajjad Academy**
 
 🌟 Overview
 
@@ -9,8 +10,8 @@ Story To SceneImages is an AI-powered desktop application designed for writers, 
 
 With a simple workflow, the software takes text from any story, processes it using advanced AI models, and generates high-quality scene images. These images can then be combined to form full AI-generated video scenes, perfect for story animation, content creation, filmmaking, and visualization projects.
 
-🎯 Core Purpose
-
+**🎯 Core Purpose
+**
 This tool was built for:
 
 Story creators
@@ -25,7 +26,7 @@ Animation and film concept artists
 
 Anyone who wants to convert text → image → video automatically
 
-🚀 Key Features
+**🚀 Key Features**
 ✨ 1. Scene Generation from Text
 
 Automatically converts story paragraphs into detailed scene images.
@@ -34,13 +35,13 @@ Allows control of prompts to customize output.
 
 Supports single or batch scene generation.
 
-✨ 2. High-Quality AI Image Output
+**✨ 2. High-Quality AI Image Output**
 
 Uses state-of-the-art image generation models.
 
 Generates realistic, cinematic, or artistic scenes depending on the prompt.
 
-✨ 3. Video Scene Support
+**✨ 3. Video Scene Support**
 
 Export generated scenes to sequence folders for video editing.
 
@@ -48,13 +49,13 @@ Easily import into Premiere Pro, DaVinci Resolve, CapCut, or any editor.
 
 Perfect for AI short films & animated storytelling.
 
-✨ 4. User-Friendly Interface
+**✨ 4. User-Friendly Interface**
 
 Built with simplicity and productivity in mind.
 
 Just input text → click generate → get the images.
 
-✨ 5. Desktop Software
+**✨ 5. Desktop Software**
 
 Built using C# and Python, ensuring speed and flexibility.
 
@@ -71,10 +72,6 @@ Python 3.10+
 
 GPU recommended for faster image generation
 
-📥 Download
-
-Download the latest release from the Releases section:
-👉 (Add GitHub release link here)
 
 ▶ Setup
 
@@ -86,7 +83,7 @@ Configure your AI API key (OpenAI, Stability, etc.)
 
 Start generating scenes!
 
-🧠 How It Works
+**🧠 How It Works**
 
 Write or paste a story paragraph
 
@@ -98,7 +95,7 @@ Generator creates high-resolution scene images
 
 Export scenes for video assembly
 
-🖼️ Example Workflow
+**🖼️ Example Workflow**
 
 Input Story Text:
 “The young hero walked into the abandoned castle, torches flickering across the dusty stone walls.”
@@ -120,7 +117,7 @@ OpenAI / Stability / Custom AI APIs
 
 JSON-based project handling
 
-🤝 Contributing
+**🤝 Contributing**
 
 Contributions are welcome!
 Feel free to submit:
@@ -131,7 +128,7 @@ Bug reports
 
 Pull requests
 
-🧑‍💻 Author & Publisher
+**🧑‍💻 Author & Publisher**
 
 Sajjad Academy
 AI Developer • Software Engineer • Automation Enthusiast
