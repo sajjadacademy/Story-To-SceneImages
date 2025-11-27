@@ -1,0 +1,181 @@
+﻿<Window x:Class="StoryToSceneImages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Story to Scene Images" Height="850" Width="1350"
+        Background="#0F172A"
+        WindowStartupLocation="CenterScreen">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="380"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT PANEL ================================ -->
+            <Border Grid.Column="0" Background="#1E293B" CornerRadius="12" Padding="15">
+                <!-- FIX: Use a single StackPanel as the Border's Child -->
+                <StackPanel>
+                    <TextBlock Text="Story Input"
+                               Foreground="White" FontSize="18"
+                               FontWeight="Bold" Margin="0 0 0 10"/>
+
+                    <TextBox x:Name="StoryTextBox" AcceptsReturn="True" 
+                             Height="160" TextWrapping="Wrap"
+                             Background="#0F172A" Foreground="White"
+                             BorderBrush="#334155" />
+
+                    <TextBlock Text="Number of Scenes:" 
+                               Margin="0 12 0 5" Foreground="White"/>
+                    <TextBox x:Name="ScenesCountTextBox" Height="28"
+                             Background="#0F172A" Foreground="White"
+                             BorderBrush="#334155"/>
+
+                    <StackPanel Orientation="Vertical" Margin="0 10 0 5">
+                        <CheckBox x:Name="CharacterConsistencyCheckBox"
+                                  Content="Character Consistency"
+                                  Foreground="White"/>
+                        <CheckBox x:Name="StyleConsistencyCheckBox"
+                                  Content="Style Consistency"
+                                  Foreground="White"/>
+                        <CheckBox x:Name="AddSceneHintsCheckBox"
+                                  Content="Auto Scene Hints"
+                                  Foreground="White" IsChecked="True"/>
+                    </StackPanel>
+                
+                    <TextBlock Text="Reference Image:" Foreground="White" Margin="0 10 0 5"/>
+                    <Button x:Name="LoadReferenceButton" Content="Load Reference Image"
+                            Height="30" Margin="0 0 0 8" Click="LoadReferenceButton_Click"/>
+
+                    <Border Background="#0F172A" BorderBrush="#334155" 
+                            BorderThickness="1" CornerRadius="8" Padding="5"
+                            Height="140" VerticalAlignment="Top">
+                        <StackPanel>
+                            <Image x:Name="ReferencePreview" Height="96" Stretch="Uniform"/>
+                            <TextBlock x:Name="ReferenceLabel"
+                                       Text="No image selected"
+                                       Foreground="#93A2B8"
+                                       HorizontalAlignment="Center" FontSize="12"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- OUTPUT FOLDER -->
+                    <TextBlock Text="Output Folder:" Foreground="White" Margin="0 12 0 5"/>
+                    <Button x:Name="ChooseOutputFolderButton" 
+                            Content="Choose Folder" Height="30"
+                             Click="ChooseOutputFolder_Click"/>
+                    <TextBlock x:Name="OutputFolderTextBlock" 
+                               Text="(none)" Foreground="#93A2B8"
+                               TextWrapping="Wrap" Margin="0 4 0 0"/>
+
+                    <!-- IMAGE GENERATION OPTIONS -->
+                    <Separator Margin="0 20 0 20"/>
+
+                    <TextBlock Text="Image Mode" Foreground="White" FontWeight="Bold"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 5 0 10">
+                        <RadioButton x:Name="ImageModeFreeRadio" Content="Free"
+                                     Foreground="White" Margin="0 0 15 0"/>
+                        <RadioButton x:Name="ImageModePaidRadio" Content="Paid"
+                                     Foreground="White"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Image Engine (Paid)" 
+                               Foreground="White"/>
+                    <ComboBox x:Name="ImageEngineComboBox" Height="28"
+                              Background="#0F172A" Foreground="Black"
+                              BorderBrush="#334155" Margin="0 5 0 0">
+                        <ComboBoxItem Content="DeepAI" Tag="deepai"/>
+                        <ComboBoxItem Content="HuggingFace FLUX" Tag="huggingface"/>
+                        <ComboBoxItem Content="Leonardo AI" Tag="leonardo"/>
+                    </ComboBox>
+
+                    <!-- IMAGE SIZE -->
+                    <TextBlock Text="Image Size" Foreground="White" Margin="0 10 0 5"/>
+                    <ComboBox x:Name="ImageSizeComboBox" Height="28"
+                              Background="#0F172A" Foreground="Black"
+                              BorderBrush="#334155">
+                        <ComboBoxItem Content="512x512"/>
+                        <ComboBoxItem Content="768x768"/>
+                        <ComboBoxItem Content="1280x720"/>
+                    </ComboBox>
+
+                    <Button x:Name="GenerateButton"
+                            Content="Generate Images"
+                            Height="40" Margin="0 20 0 0"
+                            Click="GenerateButton_Click"/>
+
+                    <Button x:Name="SaveImagesButton" 
+                            Content="Save Images" Height="32" Margin="0 10 0 0"
+                            Click="SaveImagesButton_Click"/>
+
+                    <Button x:Name="ExportZipButton" 
+                            Content="Export ZIP" Height="32" Margin="0 10 0 0"
+                            Click="ExportZipButton_Click"/>
+
+                    <Button x:Name="SaveProjectButton" 
+                            Content="Save Project" Height="32" Margin="0 10 0 0"
+                            Click="SaveProjectButton_Click"/>
+
+                    <Button x:Name="LoadProjectButton" 
+                            Content="Load Project" Height="32" Margin="0 10 0 20"
+                            Click="LoadProjectButton_Click"/>
+
+                    <!-- VIDEO SECTION -->
+                    <Separator Margin="0 20 0 20"/>
+
+                    <TextBlock Text="Video Prompt"
+                               Foreground="White" Margin="0 0 0 5"/>
+                    <TextBox x:Name="VideoPromptTextBox"
+                             Height="70" TextWrapping="Wrap"
+                             Background="#0F172A" Foreground="White"
+                             BorderBrush="#334155"/>
+
+                    <TextBlock Text="Video Mode" Foreground="White" Margin="0 10 0 0"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 5 0 10">
+                        <RadioButton x:Name="VideoModeFreeRadio" Content="Free"
+                                     Foreground="White" Margin="0 0 15 0"/>
+                        <RadioButton x:Name="VideoModePaidRadio" Content="Paid"
+                                     Foreground="White"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Video Engine (Paid)"
+                               Foreground="White"/>
+
+                    <ComboBox x:Name="VideoEngineComboBox" Height="28"
+                              Background="#0F172A" Foreground="White"
+                              BorderBrush="#334155" Margin="0 5 0 0">
+                        <ComboBoxItem Content="HeyGen" Tag="heygen"/>
+                    </ComboBox>
+
+                    <Button x:Name="GenerateVideoButton"
+                            Content="Generate Video"
+                            Height="40" Margin="0 20 0 0"
+                            Click="GenerateVideoButton_Click"/>
+
+                    <Button x:Name="OpenSettingsButton"
+                            Height="30" Margin="0 15 0 0"
+                            Content="Settings"
+                            Click="OpenSettings_Click"/>
+
+                    <TextBlock x:Name="StatusTextBlock"
+                               Foreground="#A5B4FC"
+                               Margin="0 10 0 0"
+                               Text="Ready..."/>
+                </StackPanel>
+            </Border>
+
+            <!-- RIGHT PANEL =============================== -->
+            <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled">
+                <WrapPanel x:Name="ScenesPanel" Margin="10" />
+            </ScrollViewer>
+
+        </Grid>
+    </ScrollViewer>
+</Window>
