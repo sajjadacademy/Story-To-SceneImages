@@ -15,8 +15,8 @@ Story To SceneImages is an AI-powered desktop application designed for writers, 
 
 With a simple workflow, the software takes text from any story, processes it using advanced AI models, and generates high-quality scene images. These images can then be combined to form full AI-generated video scenes, perfect for story animation, content creation, filmmaking, and visualization projects.
 
-**🎯 Core Purpose
-**
+### 🎯 Core Purpose
+
 This tool was built for:
 
 Story creators
@@ -31,7 +31,8 @@ Animation and film concept artists
 
 Anyone who wants to convert text → image → video automatically
 
-**🚀 Key Features**
+## 🚀 Key Features
+
 ✨ 1. Scene Generation from Text
 
 Automatically converts story paragraphs into detailed scene images.
@@ -66,7 +67,7 @@ Built using C# and Python, ensuring speed and flexibility.
 
 No heavy setup required.
 
-📦 Installation
+## 📦 Installation
 🔧 Requirements
 
 Windows 10 / 11
@@ -78,7 +79,7 @@ Python 3.10+
 GPU recommended for faster image generation
 
 
-▶ Setup
+## ▶ Setup
 
 Extract the downloaded ZIP
 
@@ -88,7 +89,7 @@ Configure your AI API key (OpenAI, Stability, etc.)
 
 Start generating scenes!
 
-**🧠 How It Works**
+## 🧠 How It Works
 
 Write or paste a story paragraph
 
@@ -100,7 +101,7 @@ Generator creates high-resolution scene images
 
 Export scenes for video assembly
 
-**🖼️ Example Workflow**
+## 🖼️ Example Workflow
 
 Input Story Text:
 “The young hero walked into the abandoned castle, torches flickering across the dusty stone walls.”
@@ -112,7 +113,7 @@ Generated Scene Image:
 ✔ Cinematic atmosphere
 
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 C# (Desktop UI & Controls)
 
@@ -133,7 +134,7 @@ Bug reports
 
 Pull requests
 
-**🧑‍💻 Author & Publisher**
+## 🧑‍💻 Author & Publisher
 
 Sajjad Academy
 AI Developer • Software Engineer • Automation Enthusiast
