@@ -1,10 +1,15 @@
-**📘 Story To SceneImages**
+# 📘 Story To SceneImages
 
 AI-Powered Scene Image Generator for Story Creators
 
+
+<img width="1725" height="834" alt="project iamge" src="https://github.com/user-attachments/assets/1517dcff-731e-4e9e-83a8-7f2759efbfd5" />
+
+
+
 Publisher: **Sajjad Academy**
 
-🌟 Overview
+## 🌟 Overview
 
 Story To SceneImages is an AI-powered desktop application designed for writers, storytellers, filmmakers, and digital creators who want to transform written stories into visual scenes.
 
